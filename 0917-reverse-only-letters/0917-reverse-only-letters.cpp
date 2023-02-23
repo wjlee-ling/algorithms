@@ -23,6 +23,8 @@ public:
 };
 */
 // using functions
+#include <algorithm>
+
 class Solution {
 public:
     string reverseOnlyLetters(string s) {
