@@ -7,9 +7,9 @@ public:
         int sum = 0; // # of odd numbers
         for (int num:nums) {
             sum += (num % 2 == 1);
-            counts[sum] ++;
-            ans += counts[sum-k];
             //counts[sum] ++;
+            ans += counts[sum-k];
+            counts[sum] ++;
         } return ans;
     }
 };
