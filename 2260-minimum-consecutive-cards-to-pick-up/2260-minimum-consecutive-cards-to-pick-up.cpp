@@ -11,7 +11,7 @@ public:
                     seen.erase(cards[left++]);;
                 }
                 ans = min(ans, right-left+1);
-                left++;
+                left++; // [1,2,1,1]
             }
 
         } return (ans != 100001) ? ans : -1;
