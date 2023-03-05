@@ -1,9 +1,9 @@
 class Solution {
 public:
     vector<vector<string>> groupAnagrams(vector<string>& strs) {
-        unordered_map<string, vector<string>> vocab; // e.g. {sum_of_ascii_code_each_char: [list of words]}
+        unordered_map<string, vector<string>> vocab; 
         vector<vector<string>> ans;
-        for (auto word:strs) {
+        for (auto& word:strs) {
             string sorted = word;
             sort(sorted.begin(), sorted.end());
             vocab[sorted].push_back(word);
