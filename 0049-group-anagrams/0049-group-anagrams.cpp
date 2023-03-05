@@ -7,13 +7,7 @@ public:
             string sorted = word;
             sort(sorted.begin(), sorted.end());
             vocab[sorted].push_back(word);
-            /*
-            if (ans.find(sorted_word) == ans.end()) {
-                ans[sorted_word].push_back(word);
-            } else {
-                
-            }
-            */
+
         }
         for (auto [_, words]:vocab) {
             ans.push_back(words);
