@@ -1,6 +1,7 @@
 class Solution {
 public:
     int minimumCardPickup(vector<int>& cards) {
+        // 643 ms
         unordered_map<int, vector<int>> mp;
         int ans = INT_MAX;
         for (int i=0; i<cards.size(); i++) {
@@ -13,7 +14,7 @@ public:
             }
         } return ans != INT_MAX ? ans : -1;
         
-        /*
+        /* 336 ms
         unordered_set<int> seen;
         int left = 0, ans = 100001;
         for (int right=0; right<cards.size(); right++) {
