@@ -10,7 +10,6 @@ public:
                 while (left < right && cards[left] != cards[right]) {
                     seen.erase(cards[left++]);;
                 }
-                cout << "left: " << left << " right: " << right << endl;
                 ans = min(ans, right-left+1);
                 left++;
             }
