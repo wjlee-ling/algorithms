@@ -16,8 +16,10 @@ public:
         ListNode* left = head;
         ListNode* right = left->next;
         ListNode* prev = new ListNode();
+        // need a new start b/c the starting point changes
         ListNode* start = head->next;
         bool flag = true;
+        
         while (left != nullptr && right != nullptr) {
             if (flag) {
                 ListNode* newNode = right->next;
