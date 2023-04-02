@@ -9,9 +9,10 @@ public:
         string new_s;
         new_s.reserve(stack.size());
         while (! stack.empty()) {
-            new_s.insert(new_s.begin(), stack.top());
+            new_s.push_back(stack.top());
             stack.pop();
         }
+        reverse(new_s.begin(), new_s.end());
         
         return new_s;
     }
