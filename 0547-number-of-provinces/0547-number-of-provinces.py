@@ -4,7 +4,7 @@ class Solution:
         edges = defaultdict(set)
         N = len(isConnected)
         for i in range(N):
-            for j in range(N):
+            for j in range(i+1, N):
                 if isConnected[i][j] == 1:
                     edges[i].add(j)
                     edges[j].add(i)
