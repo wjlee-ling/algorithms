@@ -1,9 +1,10 @@
 class Solution:
     def countComponents(self, n: int, edges: List[List[int]]) -> int:
         def find(x):
-            if parent[x] != x:
-                parent[x] = find(parent[x])
-            return parent[x]
+            if parent[x] == x:
+                return x
+                
+            return find(parent[x])
             
         def union(xy):
             x, y = list(map(find, xy))
