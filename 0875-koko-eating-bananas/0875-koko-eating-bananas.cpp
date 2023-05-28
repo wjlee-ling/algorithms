@@ -9,11 +9,12 @@ public:
     }
     
     int minEatingSpeed(vector<int>& piles, int h) {
-        int left, right=0, mid;
+        int left, right, mid;
         left = 1;
-        for (auto const p:piles){
-            right = max(p, right);
-        }
+        right = *max_element(piles.begin(), piles.end());
+        // for (auto const p:piles){
+        //     right = max(p, right);
+        // }
         
         while (left <= right){
             mid = left + (right-left)/2;
