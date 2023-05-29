@@ -4,7 +4,7 @@ public:
         if (dist.size() > ceil(hour)) return -1;
         
         int left = 1;
-        int right = 1e+7; // *max_element(dist.begin(), dist.end());
+        int right = 1e8; // *max_element(dist.begin(), dist.end());
         while (left<=right){
             int mid = left + (right-left) / 2;
             if (check(dist, mid, hour)) {
