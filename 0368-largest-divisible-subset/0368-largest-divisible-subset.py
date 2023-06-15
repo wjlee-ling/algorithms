@@ -16,6 +16,5 @@ class Solution:
             d[num].append(num)
 
 
-        print(d)
         ls = sorted(d.values(), key = len)
         return ls[-1]
